@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css" class="css">
+  </head>
+  <body class="bg-info">
+    <h1 class="text-center text-dark mt-2 p-3 bg-info">Javascript Search Filter</h1>
+    <input type="text" class="w-100 p-3 mt-2" id="myInput" onkeyup="filterTable()" placeholder="Search for Most Valuable Players">
+
+    <div class="container mt-3">
+      <h2 class="mb-3 text-dark">Most Valuable Football Players</h2>
+      <table class="table table-striped table-dark" id="myTable">
+        <thead class="thead-dark">
+          <tr class="bg-info">
+            <th scope="col">#</th>
+            <th scope="col">Player</th>
+            <th scope="col">Team</th>
+            <th scope="col">Market Value (€)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Kylian Mbappé</td>
+            <td>Paris Saint-Germain</td>
+            <td>180M</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Erling Haaland</td>
+            <td>Manchester City</td>
+            <td>180M</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jude Bellingham</td>
+            <td>Real Madrid</td>
+            <td>150M</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Vinícius Júnior</td>
+            <td>Real Madrid</td>
+            <td>150M</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Phil Foden</td>
+            <td>Manchester City</td>
+            <td>130M</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Pedri</td>
+            <td>Barcelona</td>
+            <td>120M</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Jamal Musiala</td>
+            <td>Bayern Munich</td>
+            <td>110M</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Federico Valverde</td>
+            <td>Real Madrid</td>
+            <td>100M</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>Gavi</td>
+            <td>Barcelona</td>
+            <td>90M</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>Rodrygo</td>
+            <td>Real Madrid</td>
+            <td>85M</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>Marcus Rashford</td>
+            <td>Manchester United</td>
+            <td>85M</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>João Félix</td>
+            <td>Atlético Madrid</td>
+            <td>80M</td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>Trent Alexander-Arnold</td>
+            <td>Liverpool</td>
+            <td>80M</td>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <td>Bruno Fernandes</td>
+            <td>Manchester United</td>
+            <td>80M</td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>Jadon Sancho</td>
+            <td>Manchester United</td>
+            <td>75M</td>
+          </tr>
+          <tr>
+            <th scope="row">16</th>
+            <td>Alphonso Davies</td>
+            <td>Bayern Munich</td>
+            <td>70M</td>
+          </tr>
+          <tr>
+            <th scope="row">17</th>
+            <td>Declan Rice</td>
+            <td>Arsenal</td>
+            <td>70M</td>
+          </tr>
+          <tr>
+            <th scope="row">18</th>
+            <td>Rafael Leão</td>
+            <td>AC Milan</td>
+            <td>70M</td>
+          </tr>
+          <tr>
+            <th scope="row">19</th>
+            <td>Christopher Nkunku</td>
+            <td>Chelsea</td>
+            <td>70M</td>
+          </tr>
+          <tr>
+            <th scope="row">20</th>
+            <td>Serge Gnabry</td>
+            <td>Bayern Munich</td>
+            <td>65M</td>
+          </tr>
+          <tr>
+            <th scope="row">21</th>
+            <td>Joshua Kimmich</td>
+            <td>Bayern Munich</td>
+            <td>65M</td>
+          </tr>
+          <tr>
+            <th scope="row">22</th>
+            <td>Bernardo Silva</td>
+            <td>Manchester City</td>
+            <td>65M</td>
+          </tr>
+          <tr>
+            <th scope="row">23</th>
+            <td>Harry Kane</td>
+            <td>Tottenham Hotspur</td>
+            <td>65M</td>
+          </tr>
+          <tr>
+            <th scope="row">24</th>
+            <td>Frenkie de Jong</td>
+            <td>Barcelona</td>
+            <td>65M</td>
+          </tr>
+          <tr>
+            <th scope="row">25</th>
+            <td>Victor Osimhen</td>
+            <td>Napoli</td>
+            <td>60M</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="./script.js"></script>
+
+</body>
+</html>
+
+
+
+
